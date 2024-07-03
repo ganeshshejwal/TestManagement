@@ -1,0 +1,110 @@
+# Test Management Project
+
+## Project Description
+
+The Test Management Project is a simple CRUD (Create, Read, Update, Delete) application for managing multiple-choice question tests. <br> It utilizes Spring Boot with Spring Data JPA for database operations and integrates Mockito for unit testing.
+
+### Technologies Used
+
+- Spring Boot 3 (latest version)
+- PostgreSQL
+- Hibernate (as the JPA implementation)
+- JUnit 5
+- Gradle (for dependency management)
+- Postman (for API testing)
+
+## Project Structure
+### Controller Layer
+
+The controller layer handles incoming HTTP requests and routes them to corresponding service methods.
+
+#### Endpoints:
+
+- **POST** `/api/testapp`: Creates a new question.
+- **GET** `/api/testapp`: Retrieves all questions.
+- **GET** `/api/testapp/{id}`: Retrieves a specific question by ID.
+- **PUT** `/api/testapp/{id}`: Updates a specific question by ID.
+- **DELETE** `/api/testapp/{id}`: Deletes a specific question by ID.
+
+### Service Layer
+
+The service layer contains business logic for managing multiple-choice questions.
+
+#### Service Methods:
+
+- `createQuestion(MCQQuestion question)`: Saves a new question.
+- `getAllQuestions()`: Retrieves all questions.
+- `getQuestionById(int id)`: Retrieves a specific question by ID.
+- `updateQuestion(int id, MCQQuestion question)`: Updates a specific question by ID.
+- `deleteQuestion(int id)`: Deletes a specific question by ID.
+
+### Repository Layer
+
+The repository layer interfaces with the database using Spring Data JPA repositories. It implements standard CRUD operations for `McqQuestionModel` entities.
+
+### Model Layer
+
+The model layer defines the structure of `McqQuestionModel` entities using JPA annotations. It represents attributes such as question text, options, correct answer, category, etc.
+
+### Database Connectivity
+
+The application utilizes Spring Data JPA and is configured for PostgreSQL database connectivity. Ensure your PostgreSQL database is set up and configured correctly, and update `application.properties` accordingly:
+
+#### Example `application.properties` configuration for PostgreSQL:
+
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/TestManagementDB
+spring.datasource.username=postgres
+spring.datasource.password=password
+spring.datasource.driver-class-name=org.postgresql.Driver
+```
+
+Replace `jdbc:postgresql://localhost:5432/TestManagementDB` with your actual PostgreSQL database URL, and adjust other properties (`username`, `password`) as needed.
+
+### Testing
+
+Unit tests are implemented using JUnit 5 and Mockito. Tests cover controller and service layer methods.
+
+## Build Steps
+
+Ensure you have ```Java Development Kit (JDK) version 21``` installed on your machine.
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ganeshshejwal/TestManagement.git
+   ```
+   
+2. Open the project in your preferred Integrated Development Environment (IDE) or navigate to the project directory using a terminal or command prompt.<br>
+
+3. Ensure that you have the ```build.gradle``` file in the project root directory. This file should contain the project configuration and dependencies.<br>
+
+4. Build the project using Gradle by running the following command in the project directory:
+   <br>Copy code
+   ```bash
+   /gradlew build
+   ```
+This command will compile the source code, run unit tests, and package the application into a JAR file.
+
+## Execution Steps
+
+After successfully building the project, To start the Spring Boot application from the command line navigate to the `build/libs` directory:
+
+```bash
+cd build/libs
+```
+### Running the Application
+
+Run application using following command:
+
+```bash
+java -jar TestmanagementapiApplication-0.0.1.jar
+```
+4. Once the application is running, you can access the API endpoints using a tool like ``` Postman or cURL ```. The available endpoints are:
+
+- **POST** `/api/testapp`: Creates a new question.
+- **GET** `/api/testapp`: Retrieves all questions.
+- **GET** `/api/testapp/{id}`: Retrieves a specific question by ID.
+- **PUT** `/api/testapp/{id}`: Updates a specific question by ID.
+- **DELETE** `/api/testapp/{id}`: Deletes a specific question by ID.
+  
+#### Ensure your PostgreSQL database (TestManagementDB) is running and correctly configured before starting the application.
