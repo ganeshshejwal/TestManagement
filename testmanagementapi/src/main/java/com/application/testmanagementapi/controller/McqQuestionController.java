@@ -3,6 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.application.testmanagementapi.model.McqQuestionModel;
 import com.application.testmanagementapi.service.McqQuestionService;
@@ -18,8 +19,8 @@ public class McqQuestionController {
     private McqQuestionService McqQuestionService;
 
     @PostMapping
-    public ResponseEntity<McqQuestionModel> createMcqQuestion(@RequestBody McqQuestionModel McqQuestion) {
-        McqQuestionModel createdMcqQuestion = McqQuestionService.saveMcqQuestion(McqQuestion);
+    public ResponseEntity<List<McqQuestionModel>> createMcqQuestion(@RequestParam("file") MultipartFile file) {
+        List<McqQuestionModel> createdMcqQuestion = McqQuestionService.saveMcqQuestion(file);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdMcqQuestion);
     }
 

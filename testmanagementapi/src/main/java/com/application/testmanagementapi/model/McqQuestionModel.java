@@ -50,14 +50,14 @@ public class McqQuestionModel{
     private String correctOption;
 
     @Column(name = "positive_mark")
-    private int positiveMark;
+    private String positiveMark;
 
     @Column(name = "negative_mark")
-    private int negativeMark;
+    private String negativeMark;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "subcategory_id")
-    private SubCategoryModel subcategoryId;
+    private SubCategoryModel subcategory;
 
    
 }
