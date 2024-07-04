@@ -1,9 +1,11 @@
 package com.application.testmanagementapi.controller;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.application.testmanagementapi.exception.CategoryNotFoundException;
 import com.application.testmanagementapi.model.CategoryModel;
 import com.application.testmanagementapi.service.CategoryService;
 
@@ -43,7 +45,12 @@ public class CategoryController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCategory(@PathVariable("id") int id) {
-        categoryService.deleteCategory(id);
+        if(categoryService.getCategoryById(id).isPresent()) {
+            categoryService.deleteCategory(id);
+        }
+        else {
+            throw new CategoryNotFoundException("Category Id Not Found");
+        }
         return ResponseEntity.noContent().build();
     }
 }

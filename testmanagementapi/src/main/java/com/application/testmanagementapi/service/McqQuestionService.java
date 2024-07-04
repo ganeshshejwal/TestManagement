@@ -44,7 +44,7 @@ public class McqQuestionService {
                         switch (j) {
                             case 2:
                                 String categoryName = cell.toString();
-                                Optional<SubCategoryModel> subCategory = subcategoryRepository.findBySubCategoryName(categoryName);
+                                Optional<SubCategoryModel> subCategory = subcategoryRepository.findBysubcategoryName(categoryName);
                                 subCategory.ifPresent(multipleChoiceQuestion::setSubcategory);
                                 break;
                             case 3:

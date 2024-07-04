@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.application.testmanagementapi.exception.QuestionNotFoundException;
 import com.application.testmanagementapi.model.SubCategoryModel;
 import com.application.testmanagementapi.service.SubcategoryService;
 
@@ -44,7 +45,12 @@ public class SubcategoryController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteSubcategory(@PathVariable("id") int id) {
-        subcategoryService.deleteSubcategory(id);
+        if(subcategoryService.getSubcategoryById(id).isPresent()){
+            subcategoryService.deleteSubcategory(id);
+        }
+        else{
+            throw new QuestionNotFoundException("Subcategory Not Found For Given Id");
+        }
         return ResponseEntity.noContent().build();
     }
 }

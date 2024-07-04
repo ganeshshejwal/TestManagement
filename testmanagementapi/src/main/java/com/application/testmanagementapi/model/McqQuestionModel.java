@@ -28,8 +28,8 @@ public class McqQuestionModel{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int questionId;
 
-    @Column(name = "category")
-    private String category;
+    //@Column(name = "category")
+    //private String category;
 
     @Column(name = "question")
     private String question;
