@@ -1,4 +1,4 @@
-package com.application.testmanagementapi.model;
+package com.application.testmanagementapplication.model;
 
 
 import jakarta.persistence.CascadeType;
@@ -10,6 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,15 +22,12 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "mcq_question")
-public class McqQuestionModel{
+public class McqQuestion{
 
     @Id
     @Column(name = "question_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int questionId;
-
-    //@Column(name = "category")
-    //private String category;
 
     @Column(name = "question")
     private String question;
@@ -57,7 +55,7 @@ public class McqQuestionModel{
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "subcategory_id")
-    private SubCategoryModel subcategory;
+    private SubCategory subCategory;
 
    
 }

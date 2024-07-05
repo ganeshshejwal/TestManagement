@@ -1,15 +1,15 @@
 package com.application.testmanagementapi.serviceTest;
 
-import com.application.testmanagementapi.model.CategoryModel;
-import com.application.testmanagementapi.model.SubCategoryModel;
-import com.application.testmanagementapi.respository.SubcategoryRepository;
-import com.application.testmanagementapi.service.SubcategoryService;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+
+import com.application.testmanagementapplication.model.Category;
+import com.application.testmanagementapplication.model.SubCategory;
+import com.application.testmanagementapplication.respository.SubcategoryRepository;
+import com.application.testmanagementapplication.service.SubcategoryService;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,10 +34,10 @@ public class SubcategoryServiceTests {
 
     @Test
     public void testSaveSubcategory() {
-        SubCategoryModel subcategory = createSampleSubcategory();
-        when(subcategoryRepository.save(any(SubCategoryModel.class))).thenReturn(subcategory);
+        SubCategory subcategory = createSampleSubcategory();
+        when(subcategoryRepository.save(any(SubCategory.class))).thenReturn(subcategory);
 
-        SubCategoryModel result = subcategoryService.saveSubcategory(subcategory);
+        SubCategory result = subcategoryService.saveSubcategory(subcategory);
 
         assertEquals(subcategory.getSubcategoryId(), result.getSubcategoryId());
         assertEquals(subcategory.getSubcategoryName(), result.getSubcategoryName());
@@ -46,13 +46,13 @@ public class SubcategoryServiceTests {
 
     @Test
     public void testGetAllSubcategories() {
-        List<SubCategoryModel> subcategories = Arrays.asList(
+        List<SubCategory> subcategories = Arrays.asList(
                 createSampleSubcategory(),
                 createSampleSubcategory()
         );
         when(subcategoryRepository.findAll()).thenReturn(subcategories);
 
-        List<SubCategoryModel> retrievedSubcategories = subcategoryService.getAllSubcategories();
+        List<SubCategory> retrievedSubcategories = subcategoryService.getAllSubcategories();
 
         assertEquals(2, retrievedSubcategories.size());
     }
@@ -60,10 +60,10 @@ public class SubcategoryServiceTests {
     @Test
     public void testGetSubcategoryById() {
         int subcategoryId = 1;
-        SubCategoryModel subcategory = createSampleSubcategory();
+        SubCategory subcategory = createSampleSubcategory();
         when(subcategoryRepository.findById(subcategoryId)).thenReturn(Optional.of(subcategory));
 
-        Optional<SubCategoryModel> retrievedSubcategory = subcategoryService.getSubcategoryById(subcategoryId);
+        Optional<SubCategory> retrievedSubcategory = subcategoryService.getSubcategoryById(subcategoryId);
 
         assertEquals(subcategoryId, retrievedSubcategory.get().getSubcategoryId());
         assertEquals(subcategory.getSubcategoryName(), retrievedSubcategory.get().getSubcategoryName());
@@ -73,10 +73,10 @@ public class SubcategoryServiceTests {
     @Test
     public void testUpdateSubcategory() {
         int subcategoryId = 1;
-        SubCategoryModel subcategoryToUpdate = createSampleSubcategory();
-        when(subcategoryRepository.save(any(SubCategoryModel.class))).thenReturn(subcategoryToUpdate);
+        SubCategory subcategoryToUpdate = createSampleSubcategory();
+        when(subcategoryRepository.save(any(SubCategory.class))).thenReturn(subcategoryToUpdate);
 
-        SubCategoryModel updatedSubcategory = subcategoryService.updateSubcategory(subcategoryId, subcategoryToUpdate);
+        SubCategory updatedSubcategory = subcategoryService.updateSubcategory(subcategoryId, subcategoryToUpdate);
 
         assertEquals(subcategoryId, updatedSubcategory.getSubcategoryId());
         assertEquals(subcategoryToUpdate.getSubcategoryName(), updatedSubcategory.getSubcategoryName());
@@ -94,12 +94,12 @@ public class SubcategoryServiceTests {
         verify(subcategoryRepository, times(1)).deleteById(subcategoryId);
     }
 
-    private SubCategoryModel createSampleSubcategory() {
-        SubCategoryModel subcategory = new SubCategoryModel();
+    private SubCategory createSampleSubcategory() {
+        SubCategory subcategory = new SubCategory();
         subcategory.setSubcategoryId(1);
         subcategory.setSubcategoryName("Sample Subcategory");
         subcategory.setSubcategoryDescription("Sample Subcategory Description");
-        subcategory.setCategoryModel(new CategoryModel()); 
+        subcategory.setCategoryModel(new Category()); 
         return subcategory;
     }
 }

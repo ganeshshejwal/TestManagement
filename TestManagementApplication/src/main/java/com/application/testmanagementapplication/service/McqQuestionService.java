@@ -1,4 +1,4 @@
-package com.application.testmanagementapi.service;
+package com.application.testmanagementapplication.service;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -8,10 +8,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import com.application.testmanagementapi.model.McqQuestionModel;
-import com.application.testmanagementapi.model.SubCategoryModel;
-import com.application.testmanagementapi.respository.McqQuestionRepository;
-import com.application.testmanagementapi.respository.SubcategoryRepository;
+
+import com.application.testmanagementapplication.model.McqQuestion;
+import com.application.testmanagementapplication.model.SubCategory;
+import com.application.testmanagementapplication.respository.McqQuestionRepository;
+import com.application.testmanagementapplication.respository.SubcategoryRepository;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -27,8 +28,8 @@ public class McqQuestionService {
     @Autowired
     private SubcategoryRepository  subcategoryRepository;
     
-    public List<McqQuestionModel> saveMcqQuestion(MultipartFile file) {
-        List<McqQuestionModel> questionBank = new ArrayList<>();
+    public List<McqQuestion> saveMcqQuestion(MultipartFile file) {
+        List<McqQuestion> questionBank = new ArrayList<>();
         
         try (InputStream inputStream = file.getInputStream();
             Workbook workbook=new XSSFWorkbook(inputStream)){
@@ -37,14 +38,14 @@ public class McqQuestionService {
             for (int i=sheet.getFirstRowNum()+1;i<=sheet.getLastRowNum();i++) {
                 Row row = sheet.getRow(i);
                 if (row != null) {
-                    McqQuestionModel multipleChoiceQuestion = new McqQuestionModel();
+                    McqQuestion multipleChoiceQuestion = new McqQuestion();
 
                     for (int j = row.getFirstCellNum(); j < row.getLastCellNum(); j++) {
                         Cell cell = row.getCell(j);
                         switch (j) {
                             case 2:
                                 String categoryName = cell.toString();
-                                Optional<SubCategoryModel> subCategory = subcategoryRepository.findBysubcategoryName(categoryName);
+                                Optional<SubCategory> subCategory = subcategoryRepository.findBysubcategoryName(categoryName);
                                 subCategory.ifPresent(multipleChoiceQuestion::setSubcategory);
                                 break;
                             case 3:
@@ -75,7 +76,7 @@ public class McqQuestionService {
                                 break;
                         }
                     }
-                    McqQuestionModel savedQuestion = mcqQuestionRepository.save(multipleChoiceQuestion);
+                    McqQuestion savedQuestion = mcqQuestionRepository.save(multipleChoiceQuestion);
                     questionBank.add(savedQuestion);
                 }
             }
@@ -86,16 +87,16 @@ public class McqQuestionService {
         return questionBank;
     }
 
-    public List<McqQuestionModel> getAllMcqQuestions() {
+    public List<McqQuestion> getAllMcqQuestions() {
         return mcqQuestionRepository.findAll();
     }
 
-    public Optional<McqQuestionModel> getMcqQuestionById(int id) {
+    public Optional<McqQuestion> getMcqQuestionById(int id) {
         return mcqQuestionRepository.findById(id);
     }
 
-    public McqQuestionModel updateMcqQuestion(int id,McqQuestionModel mcqQuestion) {
-        Optional<SubCategoryModel> subCategory = subcategoryRepository.findById(id);
+    public McqQuestion updateMcqQuestion(int id,McqQuestion mcqQuestion) {
+        Optional<SubCategory> subCategory = subcategoryRepository.findById(id);
         if(subCategory.isPresent()) mcqQuestion.setSubcategory(subCategory.get());
         return mcqQuestionRepository.save(mcqQuestion);
     }

@@ -1,10 +1,10 @@
-package com.application.testmanagementapi.service;
+package com.application.testmanagementapplication.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.application.testmanagementapi.model.CategoryModel;
-import com.application.testmanagementapi.respository.CategoryRepository;
+import com.application.testmanagementapplication.model.Category;
+import com.application.testmanagementapplication.respository.CategoryRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,19 +15,19 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-    public CategoryModel saveCategory(CategoryModel category) {
+    public Category saveCategory(Category category) {
         return categoryRepository.save(category);
     }
 
-    public List<CategoryModel> getAllCategories() {
+    public List<Category> getAllCategories() {
         return categoryRepository.findAll();
     }
 
-    public Optional<CategoryModel> getCategoryById(int id) {
+    public Optional<Category> getCategoryById(int id) {
         return categoryRepository.findById(id);
     }
 
-    public CategoryModel updateCategory(int id, CategoryModel category) {
+    public Category updateCategory(int id, Category category) {
         category.setCategoryId(id);
         return categoryRepository.save(category);
     }

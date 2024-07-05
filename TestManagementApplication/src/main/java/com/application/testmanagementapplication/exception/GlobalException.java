@@ -1,4 +1,4 @@
-package com.application.testmanagementapi.exception;
+package com.application.testmanagementapplication.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

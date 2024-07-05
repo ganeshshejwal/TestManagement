@@ -1,13 +1,13 @@
-package com.application.testmanagementapi;
+package com.application.testmanagementapplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TestmanagementapiApplication {
+public class TestManagementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TestmanagementapiApplication.class, args);
+		SpringApplication.run(TestManagementApplication.class, args);
 	}
 
 }

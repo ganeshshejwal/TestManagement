@@ -1,4 +1,4 @@
-package com.application.testmanagementapi.exception;
+package com.application.testmanagementapplication.exception;
 
 public class SubCategoryNotFoundException extends RuntimeException {
     public SubCategoryNotFoundException(String msg){

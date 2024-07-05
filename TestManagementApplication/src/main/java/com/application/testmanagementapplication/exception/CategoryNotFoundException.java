@@ -1,4 +1,4 @@
-package com.application.testmanagementapi.exception;
+package com.application.testmanagementapplication.exception;
 
 public class CategoryNotFoundException  extends RuntimeException{
     public CategoryNotFoundException(String msg){
