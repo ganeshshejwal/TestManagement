@@ -17,7 +17,7 @@ import java.util.Optional;
 @RequestMapping("/api/testapp/mcq-question")
 public class McqQuestionController {
 
-    private static final Logger logger = LoggerFactory.getLogger(McqQuestion.class);
+    private static final Logger logger = LoggerFactory.getLogger(McqQuestionController.class);
 
 
     @Autowired
@@ -34,9 +34,9 @@ public class McqQuestionController {
     @GetMapping
     public ResponseEntity<List<McqQuestion>> getAllMcqQuestions() {
         logger.info("Request for fetching all McqQuestions");
-        List<McqQuestion> questions= mcqQuestionService.getAllMcqQuestions();
+        List<McqQuestion> mcqQuestions= mcqQuestionService.getAllMcqQuestions();
         logger.info("McqQuestions fetched successfully");
-        return new ResponseEntity<>(questions, HttpStatus.OK);
+        return new ResponseEntity<>(mcqQuestions, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

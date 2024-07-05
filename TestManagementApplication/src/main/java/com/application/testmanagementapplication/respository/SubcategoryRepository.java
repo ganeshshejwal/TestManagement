@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.application.testmanagementapplication.model.SubCategory;
 
 @Repository
-public interface SubcategoryRepository extends JpaRepository<SubCategory,Integer> {
-    Optional<SubCategory> findBysubcategoryName(String subcategoryName);
+public interface SubCategoryRepository extends JpaRepository<SubCategory,Integer> {
+    Optional<SubCategory> findBysubCategoryName(String subcategoryName);
 }

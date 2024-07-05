@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.application.testmanagementapplication.model.McqQuestion;
 import com.application.testmanagementapplication.model.SubCategory;
 import com.application.testmanagementapplication.respository.McqQuestionRepository;
-import com.application.testmanagementapplication.respository.SubcategoryRepository;
+import com.application.testmanagementapplication.respository.SubCategoryRepository;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class McqQuestionService {
     private McqQuestionRepository mcqQuestionRepository;
 
     @Autowired
-    private SubcategoryRepository  subcategoryRepository;
+    private SubCategoryRepository  subCategoryRepository;
     
     public List<McqQuestion> saveMcqQuestion(MultipartFile file) {
         List<McqQuestion> questionBank = new ArrayList<>();
@@ -45,8 +45,8 @@ public class McqQuestionService {
                         switch (j) {
                             case 2:
                                 String categoryName = cell.toString();
-                                Optional<SubCategory> subCategory = subcategoryRepository.findBysubcategoryName(categoryName);
-                                subCategory.ifPresent(multipleChoiceQuestion::setSubcategory);
+                                Optional<SubCategory> subCategory = subCategoryRepository.findBysubCategoryName(categoryName);
+                                subCategory.ifPresent(multipleChoiceQuestion::setSubCategory);
                                 break;
                             case 3:
                                 multipleChoiceQuestion.setQuestion(cell.toString());
@@ -96,8 +96,8 @@ public class McqQuestionService {
     }
 
     public McqQuestion updateMcqQuestion(int id,McqQuestion mcqQuestion) {
-        Optional<SubCategory> subCategory = subcategoryRepository.findById(id);
-        if(subCategory.isPresent()) mcqQuestion.setSubcategory(subCategory.get());
+        Optional<SubCategory> subCategory = subCategoryRepository.findById(id);
+        if(subCategory.isPresent()) mcqQuestion.setSubCategory(subCategory.get());
         return mcqQuestionRepository.save(mcqQuestion);
     }
 

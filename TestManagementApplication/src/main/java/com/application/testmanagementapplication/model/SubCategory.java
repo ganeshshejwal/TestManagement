@@ -25,15 +25,15 @@ public class SubCategory{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "subcategory_id")
-    private int subcategoryId;
+    private int subCategoryId;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id")
     private Category categoryModel;
 
     @Column(name = "subcategory_name")
-    private String subcategoryName;
+    private String subCategoryName;
 
     @Column(name = "subcategory_description")
-    private String subcategoryDescription;
+    private String subCategoryDescription;
 }

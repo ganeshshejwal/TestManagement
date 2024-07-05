@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.application.testmanagementapplication.model.SubCategory;
-import com.application.testmanagementapplication.respository.SubcategoryRepository;
+import com.application.testmanagementapplication.respository.SubCategoryRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,26 +13,26 @@ import java.util.Optional;
 public class SubcategoryService {
 
     @Autowired
-    private SubcategoryRepository subcategoryRepository;
+    private SubCategoryRepository subCategoryRepository;
 
     public SubCategory saveSubcategory(SubCategory subcategory) {
-        return subcategoryRepository.save(subcategory);
+        return subCategoryRepository.save(subcategory);
     }
 
     public List<SubCategory> getAllSubcategories() {
-        return subcategoryRepository.findAll();
+        return subCategoryRepository.findAll();
     }
 
     public Optional<SubCategory> getSubcategoryById(int id) {
-        return subcategoryRepository.findById(id);
+        return subCategoryRepository.findById(id);
     }
 
     public SubCategory updateSubcategory(int id,SubCategory subcategory) {
-        subcategory.setSubcategoryId(id);
-        return subcategoryRepository.save(subcategory);
+        subcategory.setSubCategoryId(id);
+        return subCategoryRepository.save(subcategory);
     }
 
     public void deleteSubcategory(int id) {
-        subcategoryRepository.deleteById(id);
+        subCategoryRepository.deleteById(id);
     }
 }

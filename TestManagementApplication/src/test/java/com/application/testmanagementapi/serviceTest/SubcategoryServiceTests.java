@@ -8,7 +8,7 @@ import org.mockito.MockitoAnnotations;
 
 import com.application.testmanagementapplication.model.Category;
 import com.application.testmanagementapplication.model.SubCategory;
-import com.application.testmanagementapplication.respository.SubcategoryRepository;
+import com.application.testmanagementapplication.respository.SubCategoryRepository;
 import com.application.testmanagementapplication.service.SubcategoryService;
 
 import java.util.Arrays;
@@ -22,7 +22,7 @@ import static org.mockito.Mockito.*;
 public class SubcategoryServiceTests {
 
     @Mock
-    private SubcategoryRepository subcategoryRepository;
+    private SubCategoryRepository subcategoryRepository;
 
     @InjectMocks
     private SubcategoryService subcategoryService;
