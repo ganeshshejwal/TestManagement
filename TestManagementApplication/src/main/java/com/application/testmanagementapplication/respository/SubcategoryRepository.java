@@ -9,5 +9,5 @@ import com.application.testmanagementapplication.model.SubCategory;
 
 @Repository
 public interface SubCategoryRepository extends JpaRepository<SubCategory,Integer> {
-    Optional<SubCategory> findBysubCategoryName(String subcategoryName);
+    Optional<SubCategory> findBysubCategoryName(String subCategoryName);
 }

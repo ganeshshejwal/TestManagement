@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import com.application.testmanagementapplication.model.Category;
 import com.application.testmanagementapplication.service.CategoryService;
 
-
 import java.util.List;
 import java.util.Optional;
 
@@ -25,7 +24,7 @@ public class CategoryController {
     @PostMapping
     public ResponseEntity<Category> createCategory(@RequestBody Category category){
         logger.info("Request for creating Category");
-        Category createdCategory = categoryService.saveCategory(category);
+        Category createdCategory = categoryService.createCategory(category);
         logger.info("Category created successfully");
         return new ResponseEntity<>(createdCategory, HttpStatus.CREATED);
     }

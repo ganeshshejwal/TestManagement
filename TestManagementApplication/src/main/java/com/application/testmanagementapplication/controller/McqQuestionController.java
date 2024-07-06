@@ -26,7 +26,7 @@ public class McqQuestionController {
     @PostMapping
     public ResponseEntity<List<McqQuestion>> createMcqQuestion(@RequestParam("file") MultipartFile file) {
         logger.info("Request for creating McqQuestion");
-        List<McqQuestion> createdMcqQuestion = mcqQuestionService.saveMcqQuestion(file);
+        List<McqQuestion> createdMcqQuestion = mcqQuestionService.createMcqQuestion(file);
         logger.info("McqQuestion created successfully");
         return new ResponseEntity<>(createdMcqQuestion, HttpStatus.CREATED);
     }

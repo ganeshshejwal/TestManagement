@@ -29,7 +29,7 @@ public class SubCategory{
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id")
-    private Category categoryModel;
+    private Category category;
 
     @Column(name = "subcategory_name")
     private String subCategoryName;
