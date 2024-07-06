@@ -40,7 +40,7 @@ The service layer contains business logic for managing multiple-choice questions
 
 ### Repository Layer
 
-The repository layer interfaces with the database using Spring Data JPA repositories. It implements standard CRUD operations for `McqQuestionModel` entities.
+The repository layer interfaces with the database using Spring Data JPA repositories. It implements standard CRUD operations for `McqQuestion` entities.
 
 ### Model Layer
 
@@ -57,6 +57,11 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/TestManagementDB
 spring.datasource.username=postgres
 spring.datasource.password=password
 spring.datasource.driver-class-name=org.postgresql.Driver
+
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+
+logging.file.name=./TestManagementApplication/src/main/java/com/application/testmanagementapplication/logs/Logback.log
 ```
 
 Replace `jdbc:postgresql://localhost:5432/TestManagementDB` with your actual PostgreSQL database URL, and adjust other properties (`username`, `password`) as needed.
@@ -97,7 +102,7 @@ cd build/libs
 Run application using following command:
 
 ```bash
-java -jar TestmanagementapiApplication-0.0.1.jar
+java -jar TestManagementApplication-0.0.1.jar
 ```
 4. Once the application is running, you can access the API endpoints using a tool like ``` Postman or cURL ```. The available endpoints are:
 
