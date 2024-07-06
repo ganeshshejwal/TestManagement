@@ -95,7 +95,6 @@ public class McqQuestionServiceImpl implements McqQuestionService {
                         logger.error("McqQuestion is already present");
                         throw new DataAlreadyExistsException("McqQuestion is already present.");
                     }
-
                     McqQuestion savedQuestion = mcqQuestionRepository.save(mcqQuestion);
                     questions.add(savedQuestion);
                 }
@@ -110,7 +109,14 @@ public class McqQuestionServiceImpl implements McqQuestionService {
     }
 
     public List<McqQuestion> getAllMcqQuestions() {
-        return mcqQuestionRepository.findAll();
+        logger.info("Request for fetching all McqQuestions");
+        List<McqQuestion> mcqQuestions = mcqQuestionRepository.findAll();
+        if (mcqQuestions.isEmpty()) {
+            logger.error("No McqQuestions found");
+            throw new DataNotFoundException("No McqQuestions found.");
+        }
+        logger.info("McqQuestions fetched successfully");
+        return mcqQuestions;
     }
 
     public Optional<McqQuestion> getMcqQuestionById(int id) {
