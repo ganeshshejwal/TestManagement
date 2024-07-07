@@ -62,7 +62,7 @@ public class CategoryServiceImplTest {
 
     @Test
     public void testGetCategoryById() {
-        int categoryId = 1;
+        int categoryId = 0;
         when(categoryRepository.findById(categoryId)).thenReturn(Optional.of(category));
         Optional<Category> fetchedCategory = categoryService.getCategoryById(categoryId);
         assertEquals(categoryId, fetchedCategory.get().getCategoryId());

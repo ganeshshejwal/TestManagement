@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -53,7 +54,7 @@ public class CategoryControllerTest {
     @Test
     public void testGetCategoryById() {
         int categoryId=1;
-        when(categoryService.getCategoryById(categoryId).get()).thenReturn(category);
+        when(categoryService.getCategoryById(categoryId)).thenReturn(Optional.of(category));
         ResponseEntity<Category> responseEntity = categoryController.getCategoryById(1);
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
     }

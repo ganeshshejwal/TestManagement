@@ -114,3 +114,225 @@
 2024-07-07T00:07:57.338+05:30  INFO 5868 --- [testmanagementapi] [http-nio-8080-exec-3] c.a.t.s.s.McqQuestionServiceImpl         : Request for creating McqQuestions
 2024-07-07T00:07:58.283+05:30 ERROR 5868 --- [testmanagementapi] [http-nio-8080-exec-3] c.a.t.s.s.McqQuestionServiceImpl         : SubCategory 'Annotation' not found for McqQuestion
 2024-07-07T00:07:58.285+05:30 ERROR 5868 --- [testmanagementapi] [http-nio-8080-exec-3] c.a.t.s.s.McqQuestionServiceImpl         : Error occurred while processing file for creating McqQuestions
+2024-07-07T18:16:42.090+05:30  INFO 6216 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Starting TestManagementApplication using Java 21.0.3 with PID 6216 (D:\Assesment No.2\TestManagementApplication\build\classes\java\main started by ganesh.shejwal in D:\Assesment No.2)
+2024-07-07T18:16:42.096+05:30  INFO 6216 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-07-07T18:16:44.302+05:30  INFO 6216 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-07T18:16:44.596+05:30  INFO 6216 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 261 ms. Found 3 JPA repository interfaces.
+2024-07-07T18:16:47.508+05:30  INFO 6216 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-07T18:16:47.548+05:30  INFO 6216 --- [testmanagementapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-07T18:16:47.549+05:30  INFO 6216 --- [testmanagementapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-07T18:16:47.736+05:30  INFO 6216 --- [testmanagementapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-07T18:16:47.740+05:30  INFO 6216 --- [testmanagementapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5519 ms
+2024-07-07T18:16:48.356+05:30  INFO 6216 --- [testmanagementapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-07T18:16:48.526+05:30  INFO 6216 --- [testmanagementapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-07T18:16:48.677+05:30  INFO 6216 --- [testmanagementapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-07T18:16:49.933+05:30  INFO 6216 --- [testmanagementapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-07T18:16:50.156+05:30  INFO 6216 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-07T18:16:50.864+05:30  INFO 6216 --- [testmanagementapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@790ac3e0
+2024-07-07T18:16:50.872+05:30  INFO 6216 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-07T18:16:54.771+05:30  INFO 6216 --- [testmanagementapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-07T18:16:55.026+05:30  INFO 6216 --- [testmanagementapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-07T18:16:57.188+05:30  WARN 6216 --- [testmanagementapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-07T18:16:59.654+05:30  INFO 6216 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-07T18:16:59.828+05:30  INFO 6216 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Started TestManagementApplication in 19.703 seconds (process running for 21.288)
+2024-07-07T18:17:06.311+05:30  INFO 6216 --- [testmanagementapi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-07T18:17:06.312+05:30  INFO 6216 --- [testmanagementapi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-07T18:17:06.314+05:30  INFO 6216 --- [testmanagementapi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-07-07T18:17:06.429+05:30  INFO 6216 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.controller.McqQuestionController   : Request for creating McqQuestion
+2024-07-07T18:17:06.430+05:30  INFO 6216 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.s.s.McqQuestionServiceImpl         : Request for creating McqQuestion
+2024-07-07T18:17:07.487+05:30 ERROR 6216 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.s.s.McqQuestionServiceImpl         : SubCategory is not found
+2024-07-07T18:17:07.488+05:30 ERROR 6216 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.s.s.McqQuestionServiceImpl         : Error occurred while processing file for creating McqQuestions
+2024-07-07T18:17:53.542+05:30  INFO 6216 --- [testmanagementapi] [http-nio-8080-exec-4] c.a.t.controller.McqQuestionController   : Request for creating McqQuestion
+2024-07-07T18:17:53.543+05:30  INFO 6216 --- [testmanagementapi] [http-nio-8080-exec-4] c.a.t.s.s.McqQuestionServiceImpl         : Request for creating McqQuestion
+2024-07-07T18:17:53.609+05:30 ERROR 6216 --- [testmanagementapi] [http-nio-8080-exec-4] c.a.t.s.s.McqQuestionServiceImpl         : SubCategory is not found
+2024-07-07T18:17:53.610+05:30 ERROR 6216 --- [testmanagementapi] [http-nio-8080-exec-4] c.a.t.s.s.McqQuestionServiceImpl         : Error occurred while processing file for creating McqQuestions
+2024-07-07T18:18:15.544+05:30  INFO 6216 --- [testmanagementapi] [http-nio-8080-exec-5] c.a.t.controller.McqQuestionController   : Request for creating McqQuestion
+2024-07-07T18:18:15.544+05:30  INFO 6216 --- [testmanagementapi] [http-nio-8080-exec-5] c.a.t.s.s.McqQuestionServiceImpl         : Request for creating McqQuestion
+2024-07-07T18:18:15.601+05:30 ERROR 6216 --- [testmanagementapi] [http-nio-8080-exec-5] c.a.t.s.s.McqQuestionServiceImpl         : SubCategory is not found
+2024-07-07T18:18:15.603+05:30 ERROR 6216 --- [testmanagementapi] [http-nio-8080-exec-5] c.a.t.s.s.McqQuestionServiceImpl         : Error occurred while processing file for creating McqQuestions
+2024-07-07T18:25:49.552+05:30  INFO 8416 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Starting TestManagementApplication using Java 21.0.3 with PID 8416 (D:\Assesment No.2\TestManagementApplication\build\classes\java\main started by ganesh.shejwal in D:\Assesment No.2)
+2024-07-07T18:25:49.558+05:30  INFO 8416 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-07-07T18:25:51.688+05:30  INFO 8416 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-07T18:25:51.839+05:30  INFO 8416 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 3 JPA repository interfaces.
+2024-07-07T18:25:52.730+05:30  INFO 8416 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-07T18:25:52.761+05:30  INFO 8416 --- [testmanagementapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-07T18:25:52.761+05:30  INFO 8416 --- [testmanagementapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-07T18:25:52.941+05:30  INFO 8416 --- [testmanagementapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-07T18:25:52.942+05:30  INFO 8416 --- [testmanagementapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3273 ms
+2024-07-07T18:25:53.237+05:30  INFO 8416 --- [testmanagementapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-07T18:25:53.330+05:30  INFO 8416 --- [testmanagementapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-07T18:25:53.391+05:30  INFO 8416 --- [testmanagementapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-07T18:25:53.745+05:30  INFO 8416 --- [testmanagementapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-07T18:25:53.890+05:30  INFO 8416 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-07T18:25:54.177+05:30  INFO 8416 --- [testmanagementapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@42107318
+2024-07-07T18:25:54.180+05:30  INFO 8416 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-07T18:25:55.912+05:30  INFO 8416 --- [testmanagementapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-07T18:25:55.997+05:30  INFO 8416 --- [testmanagementapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-07T18:25:56.559+05:30  WARN 8416 --- [testmanagementapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-07T18:25:57.175+05:30  INFO 8416 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-07T18:25:57.190+05:30  INFO 8416 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Started TestManagementApplication in 8.348 seconds (process running for 8.971)
+2024-07-07T18:26:04.516+05:30  INFO 8416 --- [testmanagementapi] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-07T18:26:04.518+05:30  INFO 8416 --- [testmanagementapi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-07T18:26:04.521+05:30  INFO 8416 --- [testmanagementapi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-07T18:26:04.677+05:30  INFO 8416 --- [testmanagementapi] [http-nio-8080-exec-3] c.a.t.controller.McqQuestionController   : Request for creating McqQuestion
+2024-07-07T18:26:04.678+05:30  INFO 8416 --- [testmanagementapi] [http-nio-8080-exec-3] c.a.t.s.s.McqQuestionServiceImpl         : Request for creating McqQuestion
+2024-07-07T18:26:05.960+05:30 ERROR 8416 --- [testmanagementapi] [http-nio-8080-exec-3] c.a.t.s.s.McqQuestionServiceImpl         : SubCategory is not found
+2024-07-07T18:26:05.962+05:30 ERROR 8416 --- [testmanagementapi] [http-nio-8080-exec-3] c.a.t.s.s.McqQuestionServiceImpl         : Error occurred while processing file for creating McqQuestions
+2024-07-07T18:26:52.546+05:30  INFO 11208 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Starting TestManagementApplication using Java 21.0.3 with PID 11208 (D:\Assesment No.2\TestManagementApplication\build\classes\java\main started by ganesh.shejwal in D:\Assesment No.2)
+2024-07-07T18:26:52.551+05:30  INFO 11208 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-07-07T18:26:54.098+05:30  INFO 11208 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-07T18:26:54.341+05:30  INFO 11208 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 213 ms. Found 3 JPA repository interfaces.
+2024-07-07T18:26:55.749+05:30  INFO 11208 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-07T18:26:55.781+05:30  INFO 11208 --- [testmanagementapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-07T18:26:55.816+05:30  INFO 11208 --- [testmanagementapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-07T18:26:56.059+05:30  INFO 11208 --- [testmanagementapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-07T18:26:56.061+05:30  INFO 11208 --- [testmanagementapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3374 ms
+2024-07-07T18:26:56.788+05:30  INFO 11208 --- [testmanagementapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-07T18:26:56.902+05:30  INFO 11208 --- [testmanagementapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-07T18:26:56.955+05:30  INFO 11208 --- [testmanagementapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-07T18:26:57.461+05:30  INFO 11208 --- [testmanagementapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-07T18:26:57.530+05:30  INFO 11208 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-07T18:26:57.887+05:30  INFO 11208 --- [testmanagementapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c2e3460
+2024-07-07T18:26:57.891+05:30  INFO 11208 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-07T18:26:59.750+05:30  INFO 11208 --- [testmanagementapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-07T18:26:59.909+05:30  INFO 11208 --- [testmanagementapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-07T18:27:01.746+05:30  WARN 11208 --- [testmanagementapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-07T18:27:03.058+05:30  INFO 11208 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-07T18:27:03.084+05:30  INFO 11208 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Started TestManagementApplication in 11.579 seconds (process running for 12.46)
+2024-07-07T18:27:16.293+05:30  INFO 11208 --- [testmanagementapi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-07T18:27:16.296+05:30  INFO 11208 --- [testmanagementapi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-07T18:27:16.307+05:30  INFO 11208 --- [testmanagementapi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2024-07-07T18:27:16.497+05:30  INFO 11208 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.controller.McqQuestionController   : Request for creating McqQuestion
+2024-07-07T18:27:16.498+05:30  INFO 11208 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.s.s.McqQuestionServiceImpl         : Request for creating McqQuestion
+2024-07-07T18:27:17.675+05:30 ERROR 11208 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.s.s.McqQuestionServiceImpl         : SubCategory is not found
+2024-07-07T18:27:17.676+05:30 ERROR 11208 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.s.s.McqQuestionServiceImpl         : Error occurred while processing file for creating McqQuestions
+2024-07-07T18:28:58.511+05:30  INFO 14340 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Starting TestManagementApplication using Java 21.0.3 with PID 14340 (D:\Assesment No.2\TestManagementApplication\build\classes\java\main started by ganesh.shejwal in D:\Assesment No.2)
+2024-07-07T18:28:58.514+05:30  INFO 14340 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-07-07T18:28:59.777+05:30  INFO 14340 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-07T18:28:59.980+05:30  INFO 14340 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 182 ms. Found 3 JPA repository interfaces.
+2024-07-07T18:29:01.212+05:30  INFO 14340 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-07T18:29:01.261+05:30  INFO 14340 --- [testmanagementapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-07T18:29:01.266+05:30  INFO 14340 --- [testmanagementapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-07T18:29:01.448+05:30  INFO 14340 --- [testmanagementapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-07T18:29:01.449+05:30  INFO 14340 --- [testmanagementapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2843 ms
+2024-07-07T18:29:01.782+05:30  INFO 14340 --- [testmanagementapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-07T18:29:01.901+05:30  INFO 14340 --- [testmanagementapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-07T18:29:01.971+05:30  INFO 14340 --- [testmanagementapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-07T18:29:02.419+05:30  INFO 14340 --- [testmanagementapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-07T18:29:02.475+05:30  INFO 14340 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-07T18:29:02.770+05:30  INFO 14340 --- [testmanagementapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3babcaed
+2024-07-07T18:29:02.773+05:30  INFO 14340 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-07T18:29:04.277+05:30  INFO 14340 --- [testmanagementapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-07T18:29:04.446+05:30  INFO 14340 --- [testmanagementapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-07T18:29:05.027+05:30  WARN 14340 --- [testmanagementapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-07T18:29:05.935+05:30  INFO 14340 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-07T18:29:05.959+05:30  INFO 14340 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Started TestManagementApplication in 8.081 seconds (process running for 8.767)
+2024-07-07T18:29:13.698+05:30  INFO 14340 --- [testmanagementapi] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-07T18:29:13.700+05:30  INFO 14340 --- [testmanagementapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-07T18:29:13.702+05:30  INFO 14340 --- [testmanagementapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-07-07T18:29:13.907+05:30  INFO 14340 --- [testmanagementapi] [http-nio-8080-exec-1] c.a.t.controller.McqQuestionController   : Request for creating McqQuestion
+2024-07-07T18:29:13.908+05:30  INFO 14340 --- [testmanagementapi] [http-nio-8080-exec-1] c.a.t.s.s.McqQuestionServiceImpl         : Request for creating McqQuestion
+2024-07-07T18:29:15.007+05:30 ERROR 14340 --- [testmanagementapi] [http-nio-8080-exec-1] c.a.t.s.s.McqQuestionServiceImpl         : SubCategory is not found
+2024-07-07T18:29:15.029+05:30 ERROR 14340 --- [testmanagementapi] [http-nio-8080-exec-1] c.a.t.s.s.McqQuestionServiceImpl         : Error occurred while processing file for creating McqQuestions
+2024-07-07T18:33:43.228+05:30  INFO 18360 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Starting TestManagementApplication using Java 21.0.3 with PID 18360 (D:\Assesment No.2\TestManagementApplication\build\classes\java\main started by ganesh.shejwal in D:\Assesment No.2)
+2024-07-07T18:33:43.231+05:30  INFO 18360 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-07-07T18:33:44.419+05:30  INFO 18360 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-07T18:33:44.600+05:30  INFO 18360 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 166 ms. Found 3 JPA repository interfaces.
+2024-07-07T18:33:45.730+05:30  INFO 18360 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-07T18:33:45.754+05:30  INFO 18360 --- [testmanagementapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-07T18:33:45.755+05:30  INFO 18360 --- [testmanagementapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-07T18:33:45.933+05:30  INFO 18360 --- [testmanagementapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-07T18:33:45.935+05:30  INFO 18360 --- [testmanagementapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2611 ms
+2024-07-07T18:33:46.240+05:30  INFO 18360 --- [testmanagementapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-07T18:33:46.361+05:30  INFO 18360 --- [testmanagementapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-07T18:33:46.445+05:30  INFO 18360 --- [testmanagementapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-07T18:33:46.887+05:30  INFO 18360 --- [testmanagementapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-07T18:33:46.947+05:30  INFO 18360 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-07T18:33:47.245+05:30  INFO 18360 --- [testmanagementapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3120495d
+2024-07-07T18:33:47.247+05:30  INFO 18360 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-07T18:33:48.746+05:30  INFO 18360 --- [testmanagementapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-07T18:33:48.833+05:30  INFO 18360 --- [testmanagementapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-07T18:33:49.358+05:30  WARN 18360 --- [testmanagementapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-07T18:33:50.029+05:30  INFO 18360 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-07T18:33:50.046+05:30  INFO 18360 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Started TestManagementApplication in 7.607 seconds (process running for 8.407)
+2024-07-07T18:34:04.806+05:30  INFO 18360 --- [testmanagementapi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-07T18:34:04.807+05:30  INFO 18360 --- [testmanagementapi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-07T18:34:04.810+05:30  INFO 18360 --- [testmanagementapi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-07-07T18:34:04.961+05:30  INFO 18360 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.controller.McqQuestionController   : Request for creating McqQuestion
+2024-07-07T18:34:04.962+05:30  INFO 18360 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.s.s.McqQuestionServiceImpl         : Request for creating McqQuestion
+2024-07-07T18:34:05.948+05:30 ERROR 18360 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.s.s.McqQuestionServiceImpl         : SubCategory is not found
+2024-07-07T18:34:05.950+05:30 ERROR 18360 --- [testmanagementapi] [http-nio-8080-exec-2] c.a.t.s.s.McqQuestionServiceImpl         : Error occurred while processing file for creating McqQuestions
+2024-07-07T18:34:54.843+05:30  INFO 18360 --- [testmanagementapi] [http-nio-8080-exec-4] c.a.t.controller.McqQuestionController   : Request for creating McqQuestion
+2024-07-07T18:34:54.843+05:30  INFO 18360 --- [testmanagementapi] [http-nio-8080-exec-4] c.a.t.s.s.McqQuestionServiceImpl         : Request for creating McqQuestion
+2024-07-07T18:34:55.126+05:30  INFO 18360 --- [testmanagementapi] [http-nio-8080-exec-4] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestion created successfully
+2024-07-07T18:34:55.127+05:30  INFO 18360 --- [testmanagementapi] [http-nio-8080-exec-4] c.a.t.controller.McqQuestionController   : McqQuestion created successfully
+2024-07-07T18:42:59.896+05:30  INFO 14032 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Starting TestManagementApplication using Java 21.0.3 with PID 14032 (D:\Assesment No.2\TestManagementApplication\build\classes\java\main started by ganesh.shejwal in D:\Assesment No.2)
+2024-07-07T18:42:59.901+05:30  INFO 14032 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-07-07T18:43:01.113+05:30  INFO 14032 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-07T18:43:01.280+05:30  INFO 14032 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 155 ms. Found 3 JPA repository interfaces.
+2024-07-07T18:43:02.531+05:30  INFO 14032 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-07T18:43:02.559+05:30  INFO 14032 --- [testmanagementapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-07T18:43:02.561+05:30  INFO 14032 --- [testmanagementapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-07T18:43:02.732+05:30  INFO 14032 --- [testmanagementapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-07T18:43:02.734+05:30  INFO 14032 --- [testmanagementapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2728 ms
+2024-07-07T18:43:03.868+05:30  INFO 14032 --- [testmanagementapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-07T18:43:04.022+05:30  INFO 14032 --- [testmanagementapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-07T18:43:04.108+05:30  INFO 14032 --- [testmanagementapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-07T18:43:04.731+05:30  INFO 14032 --- [testmanagementapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-07T18:43:04.782+05:30  INFO 14032 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-07T18:43:05.025+05:30  INFO 14032 --- [testmanagementapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@766b6d02
+2024-07-07T18:43:05.028+05:30  INFO 14032 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-07T18:43:07.171+05:30  INFO 14032 --- [testmanagementapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-07T18:43:07.322+05:30  INFO 14032 --- [testmanagementapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-07T18:43:08.284+05:30  WARN 14032 --- [testmanagementapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-07T18:43:09.600+05:30  INFO 14032 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-07T18:43:09.643+05:30  INFO 14032 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Started TestManagementApplication in 10.5 seconds (process running for 11.06)
+2024-07-07T18:43:23.538+05:30  INFO 14472 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Starting TestManagementApplication using Java 21.0.3 with PID 14472 (D:\Assesment No.2\TestManagementApplication\build\classes\java\main started by ganesh.shejwal in D:\Assesment No.2)
+2024-07-07T18:43:23.542+05:30  INFO 14472 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-07-07T18:43:25.326+05:30  INFO 14472 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-07T18:43:25.525+05:30  INFO 14472 --- [testmanagementapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 172 ms. Found 3 JPA repository interfaces.
+2024-07-07T18:43:27.777+05:30  INFO 14472 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-07T18:43:27.816+05:30  INFO 14472 --- [testmanagementapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-07T18:43:27.817+05:30  INFO 14472 --- [testmanagementapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-07T18:43:28.108+05:30  INFO 14472 --- [testmanagementapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-07T18:43:28.153+05:30  INFO 14472 --- [testmanagementapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4496 ms
+2024-07-07T18:43:29.362+05:30  INFO 14472 --- [testmanagementapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-07T18:43:29.520+05:30  INFO 14472 --- [testmanagementapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-07T18:43:29.596+05:30  INFO 14472 --- [testmanagementapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-07T18:43:30.360+05:30  INFO 14472 --- [testmanagementapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-07T18:43:30.431+05:30  INFO 14472 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-07T18:43:30.834+05:30  INFO 14472 --- [testmanagementapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@19bfbe28
+2024-07-07T18:43:30.844+05:30  INFO 14472 --- [testmanagementapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-07T18:43:34.937+05:30  INFO 14472 --- [testmanagementapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-07T18:43:35.105+05:30  INFO 14472 --- [testmanagementapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-07T18:43:36.017+05:30  WARN 14472 --- [testmanagementapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-07T18:43:37.354+05:30  INFO 14472 --- [testmanagementapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-07T18:43:37.450+05:30  INFO 14472 --- [testmanagementapi] [main] c.a.t.TestManagementApplication          : Started TestManagementApplication in 14.941 seconds (process running for 15.779)
+2024-07-07T18:49:31.511+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-07T18:49:31.512+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-07T18:49:31.520+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2024-07-07T18:49:31.675+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-5] c.a.t.controller.McqQuestionController   : Request for fetching all McqQuestions
+2024-07-07T18:49:31.676+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-5] c.a.t.s.s.McqQuestionServiceImpl         : Request for fetching all McqQuestions
+2024-07-07T18:49:31.892+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-5] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestions fetched successfully
+2024-07-07T18:49:31.893+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-5] c.a.t.controller.McqQuestionController   : McqQuestions fetched successfully
+2024-07-07T18:49:38.416+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-6] c.a.t.controller.McqQuestionController   : Request for deleting McqQuestion using McqQuestion Id
+2024-07-07T18:49:38.417+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-6] c.a.t.s.s.McqQuestionServiceImpl         : Request for deleting McqQuestion using McqQuestion Id
+2024-07-07T18:49:38.535+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-6] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestion deleted successfully
+2024-07-07T18:49:38.536+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-6] c.a.t.controller.McqQuestionController   : McqQuestion deleted sucessfully
+2024-07-07T18:49:51.207+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-8] c.a.t.controller.McqQuestionController   : Request for fetching McqQuestion using McqQuestion Id
+2024-07-07T18:49:51.208+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-8] c.a.t.s.s.McqQuestionServiceImpl         : Request for fetching McqQuestion using McqQuestion Id
+2024-07-07T18:49:51.212+05:30 ERROR 14472 --- [testmanagementapi] [http-nio-8080-exec-8] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestion is not found
+2024-07-07T18:49:54.887+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-7] c.a.t.controller.McqQuestionController   : Request for fetching McqQuestion using McqQuestion Id
+2024-07-07T18:49:54.888+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-7] c.a.t.s.s.McqQuestionServiceImpl         : Request for fetching McqQuestion using McqQuestion Id
+2024-07-07T18:49:54.894+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-7] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestion fetched successfully
+2024-07-07T18:49:54.895+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-7] c.a.t.controller.McqQuestionController   : McqQuestion fetched successfully
+2024-07-07T18:50:04.011+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-9] c.a.t.controller.McqQuestionController   : Request for updating McqQuestion using SubCategory Id
+2024-07-07T18:50:04.012+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-9] c.a.t.s.s.McqQuestionServiceImpl         : Request for updating McqQuestion using McqQuestion Id
+2024-07-07T18:50:04.015+05:30 ERROR 14472 --- [testmanagementapi] [http-nio-8080-exec-9] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestion is not found
+2024-07-07T18:50:09.197+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-10] c.a.t.controller.McqQuestionController   : Request for updating McqQuestion using SubCategory Id
+2024-07-07T18:50:09.198+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-10] c.a.t.s.s.McqQuestionServiceImpl         : Request for updating McqQuestion using McqQuestion Id
+2024-07-07T18:50:09.255+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-10] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestion updated successfully
+2024-07-07T18:50:09.257+05:30  INFO 14472 --- [testmanagementapi] [http-nio-8080-exec-10] c.a.t.controller.McqQuestionController   : McqQuestion updated sucessfully
+2024-07-07T18:50:35.443+05:30  INFO 14472 --- [testmanagementapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-07T18:50:35.447+05:30  INFO 14472 --- [testmanagementapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-07T18:50:35.461+05:30  INFO 14472 --- [testmanagementapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
