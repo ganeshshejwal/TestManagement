@@ -13,6 +13,7 @@ The Test Management Project is a simple CRUD (Create, Read, Update, Delete) appl
 - Gradle (for dependency management)
 - Postman (for API testing)
 - Logback (logging)
+- Lombok
 
 ## Project Structure
 ### Controller Layer
@@ -29,7 +30,7 @@ The repository layer interfaces with the database using Spring Data JPA reposito
 
 ### Model Layer
 
-The model layer defines the structure of Model entities using JPA annotations. 
+The model layer defines the structure of Model entities using JPA and lombok annotations. 
 
 ### Database Connectivity
 
