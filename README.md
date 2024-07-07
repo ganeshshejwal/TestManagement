@@ -90,6 +90,6 @@ Run application using following command:
 ```bash
 java -jar TestManagementApplication-0.0.1.jar
 ```
-4. Once the application is running, you can access the API endpoints using a tool like ``` Postman or cURL ```.
+Once the application is running, you can access the API endpoints using a tool like ``` Postman or cURL ```.
 
 #### Ensure your PostgreSQL database (TestManagementDB) is running and correctly configured before starting the application.
