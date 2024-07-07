@@ -12,39 +12,24 @@ The Test Management Project is a simple CRUD (Create, Read, Update, Delete) appl
 - JUnit 5
 - Gradle (for dependency management)
 - Postman (for API testing)
+- Logback (logging)
 
 ## Project Structure
 ### Controller Layer
 
 The controller layer handles incoming HTTP requests and routes them to corresponding service methods.
 
-#### Endpoints:
-
-- **POST** `/api/testapp`: Creates a new question.
-- **GET** `/api/testapp`: Retrieves all questions.
-- **GET** `/api/testapp/{id}`: Retrieves a specific question by ID.
-- **PUT** `/api/testapp/{id}`: Updates a specific question by ID.
-- **DELETE** `/api/testapp/{id}`: Deletes a specific question by ID.
-
 ### Service Layer
 
-The service layer contains business logic for managing multiple-choice questions.
-
-#### Service Methods:
-
-- `createQuestion(MCQQuestion question)`: Saves a new question.
-- `getAllQuestions()`: Retrieves all questions.
-- `getQuestionById(int id)`: Retrieves a specific question by ID.
-- `updateQuestion(int id, MCQQuestion question)`: Updates a specific question by ID.
-- `deleteQuestion(int id)`: Deletes a specific question by ID.
+The service layer contains business logic, exception handling, input data validation.
 
 ### Repository Layer
 
-The repository layer interfaces with the database using Spring Data JPA repositories. It implements standard CRUD operations for `McqQuestion` entities.
+The repository layer interfaces with the database using Spring Data JPA repositories. It implements standard CRUD operations.
 
 ### Model Layer
 
-The model layer defines the structure of `McqQuestionModel` entities using JPA annotations. It represents attributes such as question text, options, correct answer, category, etc.
+The model layer defines the structure of Model entities using JPA annotations. 
 
 ### Database Connectivity
 
@@ -104,12 +89,6 @@ Run application using following command:
 ```bash
 java -jar TestManagementApplication-0.0.1.jar
 ```
-4. Once the application is running, you can access the API endpoints using a tool like ``` Postman or cURL ```. The available endpoints are:
+4. Once the application is running, you can access the API endpoints using a tool like ``` Postman or cURL ```.
 
-- **POST** `/api/testapp`: Creates a new question.
-- **GET** `/api/testapp`: Retrieves all questions.
-- **GET** `/api/testapp/{id}`: Retrieves a specific question by ID.
-- **PUT** `/api/testapp/{id}`: Updates a specific question by ID.
-- **DELETE** `/api/testapp/{id}`: Deletes a specific question by ID.
-  
 #### Ensure your PostgreSQL database (TestManagementDB) is running and correctly configured before starting the application.
