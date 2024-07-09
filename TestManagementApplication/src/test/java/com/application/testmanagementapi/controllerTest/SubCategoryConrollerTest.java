@@ -20,8 +20,6 @@ import com.application.testmanagementapplication.model.Category;
 import com.application.testmanagementapplication.model.SubCategory;
 import com.application.testmanagementapplication.service.SubCategoryService;
 
-
-
 public class SubCategoryConrollerTest {
 
     @Mock

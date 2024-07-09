@@ -1,0 +1,66 @@
+2024-07-09T14:09:50.420+05:30  INFO 12480 --- [testmanagementapi] [main] c.a.t.TestmanagementapiApplicationTests  : Starting TestmanagementapiApplicationTests using Java 21.0.3 with PID 12480 (started by ganesh.shejwal in D:\Assesment No.2\TestManagementApplication)
+2024-07-09T14:09:50.423+05:30  INFO 12480 --- [testmanagementapi] [main] c.a.t.TestmanagementapiApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2024-07-09T14:09:50.671+05:30  INFO 12480 --- [testmanagementapi] [main] c.a.t.TestmanagementapiApplicationTests  : Started TestmanagementapiApplicationTests in 0.862 seconds (process running for 4.285)
+2024-07-09T14:10:06.064+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.TestmanagementapiApplicationTests  : Starting TestmanagementapiApplicationTests using Java 21.0.3 with PID 7032 (started by ganesh.shejwal in D:\Assesment No.2\TestManagementApplication)
+2024-07-09T14:10:06.070+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.TestmanagementapiApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2024-07-09T14:10:06.366+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.TestmanagementapiApplicationTests  : Started TestmanagementapiApplicationTests in 0.767 seconds (process running for 2.717)
+2024-07-09T14:10:08.716+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.CategoryController      : Request for fetching all Categories
+2024-07-09T14:10:08.730+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.CategoryController      : Categories fetched successfully
+2024-07-09T14:10:08.815+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.CategoryController      : Request for updating Category using Category Id
+2024-07-09T14:10:08.817+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.CategoryController      : Category updated sucessfully
+2024-07-09T14:10:08.829+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.CategoryController      : Request for creating Category
+2024-07-09T14:10:08.831+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.CategoryController      : Category created successfully
+2024-07-09T14:10:08.841+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.CategoryController      : Request for deleting Category using Category Id
+2024-07-09T14:10:08.844+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.CategoryController      : Category deleted sucessfully
+2024-07-09T14:10:08.856+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.CategoryController      : Request for fetching Category using Category Id
+2024-07-09T14:10:08.856+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.CategoryController      : Category fetched successfully
+2024-07-09T14:10:09.285+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.McqQuestionController   : Request for deleting McqQuestion using McqQuestion Id
+2024-07-09T14:10:09.286+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.McqQuestionController   : McqQuestion deleted sucessfully
+2024-07-09T14:10:09.305+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.McqQuestionController   : Request for creating McqQuestion
+2024-07-09T14:10:09.306+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.McqQuestionController   : McqQuestion created successfully
+2024-07-09T14:10:09.320+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.McqQuestionController   : Request for fetching all McqQuestions
+2024-07-09T14:10:09.321+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.McqQuestionController   : McqQuestions fetched successfully
+2024-07-09T14:10:09.334+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.McqQuestionController   : Request for updating McqQuestion using SubCategory Id
+2024-07-09T14:10:09.335+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.McqQuestionController   : McqQuestion updated sucessfully
+2024-07-09T14:10:09.346+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.McqQuestionController   : Request for fetching McqQuestion using McqQuestion Id
+2024-07-09T14:10:09.348+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.McqQuestionController   : McqQuestion fetched successfully
+2024-07-09T14:10:09.439+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.SubCategoryController   : Request for updating SubCategory using SubCategory Id
+2024-07-09T14:10:09.440+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.SubCategoryController   : SubCategory updated sucessfully
+2024-07-09T14:10:09.450+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.SubCategoryController   : Request for fetching SubCategory using SubCategory Id
+2024-07-09T14:10:09.451+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.SubCategoryController   : SubCategory fetched successfully
+2024-07-09T14:10:09.470+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.SubCategoryController   : Request for fetching all SubCategories
+2024-07-09T14:10:09.471+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.SubCategoryController   : SubCategories fetched successfully
+2024-07-09T14:10:09.486+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.SubCategoryController   : Request for deleting SubCategory using SubCategory Id
+2024-07-09T14:10:09.487+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.SubCategoryController   : SubCategory deleted sucessfully
+2024-07-09T14:10:09.502+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.SubCategoryController   : Request for creating SubCategory
+2024-07-09T14:10:09.504+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.controller.SubCategoryController   : SubCategory created successfully
+2024-07-09T14:10:09.756+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.serviceimpl.CategoryServiceImpl  : Request for fetching all Categories
+2024-07-09T14:10:09.757+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.serviceimpl.CategoryServiceImpl  : Categories fetched successfully
+2024-07-09T14:10:09.786+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.serviceimpl.CategoryServiceImpl  : Request for updating Category using Category Id
+2024-07-09T14:10:09.786+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.serviceimpl.CategoryServiceImpl  : Category updated sucessfully
+2024-07-09T14:10:09.798+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.serviceimpl.CategoryServiceImpl  : Request for creating Category
+2024-07-09T14:10:09.800+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.serviceimpl.CategoryServiceImpl  : Category created successfully
+2024-07-09T14:10:09.805+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.serviceimpl.CategoryServiceImpl  : Request for deleting Category using Category Id
+2024-07-09T14:10:09.807+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.serviceimpl.CategoryServiceImpl  : Category deleted sucessfully
+2024-07-09T14:10:09.818+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.serviceimpl.CategoryServiceImpl  : Request for fetching Category using Category Id
+2024-07-09T14:10:09.819+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.serviceimpl.CategoryServiceImpl  : Category fetched successfully
+2024-07-09T14:10:10.051+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.McqQuestionServiceImpl         : Request for deleting McqQuestion using McqQuestion Id
+2024-07-09T14:10:10.052+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestion deleted successfully
+2024-07-09T14:10:10.069+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.McqQuestionServiceImpl         : Request for creating McqQuestion
+2024-07-09T14:10:11.414+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestion created successfully
+2024-07-09T14:10:11.422+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.McqQuestionServiceImpl         : Request for fetching all McqQuestions
+2024-07-09T14:10:11.425+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestions fetched successfully
+2024-07-09T14:10:11.436+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.McqQuestionServiceImpl         : Request for updating McqQuestion using McqQuestion Id
+2024-07-09T14:10:11.437+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestion updated successfully
+2024-07-09T14:10:11.447+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.McqQuestionServiceImpl         : Request for fetching McqQuestion using McqQuestion Id
+2024-07-09T14:10:11.448+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.McqQuestionServiceImpl         : McqQuestion fetched successfully
+2024-07-09T14:10:11.461+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.SubCategoryServiceImpl         : Request for updating SubCategory using SubCategory Id
+2024-07-09T14:10:11.462+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.SubCategoryServiceImpl         : SubCategory updated successfully
+2024-07-09T14:10:11.467+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.SubCategoryServiceImpl         : Request for fetching SubCategory using SubCategory Id
+2024-07-09T14:10:11.468+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.SubCategoryServiceImpl         : SubCategory fetched successfully
+2024-07-09T14:10:11.475+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.SubCategoryServiceImpl         : Request for fetching all SubCategories
+2024-07-09T14:10:11.476+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.SubCategoryServiceImpl         : SubCategories fetched successfully
+2024-07-09T14:10:11.485+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.SubCategoryServiceImpl         : Request for deleting SubCategory using SubCategory Id
+2024-07-09T14:10:11.485+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.SubCategoryServiceImpl         : SubCategory deleted successfully
+2024-07-09T14:10:11.517+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.SubCategoryServiceImpl         : Request for creating SubCategory
+2024-07-09T14:10:11.518+05:30  INFO 7032 --- [testmanagementapi] [Test worker] c.a.t.s.s.SubCategoryServiceImpl         : SubCategory created successfully
