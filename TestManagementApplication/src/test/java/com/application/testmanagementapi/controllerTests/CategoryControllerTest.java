@@ -1,4 +1,4 @@
-package com.application.testmanagementapi.controllerTest;
+package com.application.testmanagementapi.controllerTests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
@@ -74,5 +74,9 @@ public class CategoryControllerTest {
         ResponseEntity<String> responseEntity = categoryController.deleteCategory(categoryId);
         assertEquals(HttpStatus.NO_CONTENT, responseEntity.getStatusCode());
     }
+
+    // Negative Test Cases
+
+    
 
 }

@@ -1,4 +1,4 @@
-package com.application.testmanagementapi.controllerTest;
+package com.application.testmanagementapi.controllerTests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;

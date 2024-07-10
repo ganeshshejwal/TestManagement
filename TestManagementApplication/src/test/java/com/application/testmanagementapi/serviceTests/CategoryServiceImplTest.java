@@ -1,6 +1,7 @@
-package com.application.testmanagementapi.serviceTest;
+package com.application.testmanagementapi.serviceTests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.Mockito.*;
 
 import java.util.ArrayList;
@@ -11,7 +12,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+
+import com.application.testmanagementapplication.exception.DataAlreadyExistsException;
+import com.application.testmanagementapplication.exception.DataNotFoundException;
+import com.application.testmanagementapplication.exception.ObjectNullException;
 import com.application.testmanagementapplication.model.Category;
 import com.application.testmanagementapplication.respository.CategoryRepository;
 import com.application.testmanagementapplication.service.serviceimpl.CategoryServiceImpl;
@@ -88,6 +94,89 @@ public class CategoryServiceImplTest {
         int categoryId = 1;
         when(categoryRepository.findById(categoryId)).thenReturn(Optional.of(category));
         categoryService.deleteCategory(categoryId);
+    }
+
+
+    // Negative Test Cases
+
+    @Test
+    public void testCreateCategory_NullCategory() {
+        Category category = null;
+        when(modelValidator.isCategoryValid(category)).thenReturn(false);
+
+        try {
+            categoryService.createCategory(category);
+            fail("Expected ObjectNullException was not thrown");
+        } catch (ObjectNullException ex) {
+            assertEquals("Category is empty or invalid.", ex.getMessage());
+        }
+    }
+
+    @Test
+    public void testCreateCategory_DuplicateCategory() {
+        String categoryName = category.getCategoryName();
+        when(modelValidator.isCategoryValid(category)).thenReturn(true);
+        when(categoryRepository.findBycategoryName(categoryName)).thenReturn(Optional.of(category));
+
+        try {
+            categoryService.createCategory(category);
+            fail("Expected DataAlreadyExistsException was not thrown");
+        } catch (DataAlreadyExistsException ex) {
+            assertEquals("Category is already present.", ex.getMessage());
+        }
+    }
+
+    @Test
+    public void testGetAllCategories_NoCategories() {
+        when(categoryRepository.findAll()).thenReturn(java.util.Collections.emptyList());
+
+        try {
+            categoryService.getAllCategories();
+            fail("Expected DataNotFoundException was not thrown");
+        } catch (DataNotFoundException ex) {
+            assertEquals("No categories found.", ex.getMessage());
+        }
+    }
+
+    @Test
+    public void testGetCategoryById_CategoryNotFound() {
+        int nonExistingId = 999;
+        when(categoryRepository.findById(nonExistingId)).thenReturn(Optional.empty());
+
+        try {
+            categoryService.getCategoryById(nonExistingId);
+            fail("Expected DataNotFoundException was not thrown");
+        } catch (DataNotFoundException ex) {
+            assertEquals("Category is not found.", ex.getMessage());
+        }
+    }
+
+    @Test
+    public void testUpdateCategory_CategoryNotFound() {
+        int nonExistingId = 999;
+        Category categoryToUpdate = new Category(nonExistingId, "Updated Category", "Updated Description");
+    
+        Mockito.when(categoryRepository.findById(nonExistingId)).thenReturn(Optional.empty());
+    
+        try {
+            categoryService.updateCategory(nonExistingId, categoryToUpdate);
+            fail("Expected DataNotFoundException was not thrown");
+        } catch (DataNotFoundException ex) {
+            assertEquals("Category is not found.", ex.getMessage());
+        }
+    }    
+
+    @Test
+    public void testDeleteCategory_CategoryNotFound() {
+        int nonExistingId = 999;
+        when(categoryRepository.findById(nonExistingId)).thenReturn(Optional.empty());
+
+        try {
+            categoryService.deleteCategory(nonExistingId);
+            fail("Expected DataNotFoundException was not thrown");
+        } catch (DataNotFoundException ex) {
+            assertEquals("Category is not found.", ex.getMessage());
+        }
     }
 
 }
