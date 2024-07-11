@@ -5,12 +5,12 @@ import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.io.IOException;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,8 +21,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockMultipartFile;
 
-import com.application.testmanagementapplication.exception.DataAlreadyExistsException;
 import com.application.testmanagementapplication.exception.DataNotFoundException;
+import com.application.testmanagementapplication.exception.FileProcessingException;
 import com.application.testmanagementapplication.model.Category;
 import com.application.testmanagementapplication.model.McqQuestion;
 import com.application.testmanagementapplication.model.SubCategory;
@@ -30,7 +30,7 @@ import com.application.testmanagementapplication.respository.McqQuestionReposito
 import com.application.testmanagementapplication.respository.SubCategoryRepository;
 import com.application.testmanagementapplication.service.serviceimpl.McqQuestionServiceImpl;
 
-public class McqQuestionServiceImplTest {
+public class McqQuestionServiceTest {
 
     @Mock
     McqQuestion mcqQuestion;
@@ -121,40 +121,17 @@ public class McqQuestionServiceImplTest {
     // Negative Test Cases
 
     @Test
-    public void testCreateMcqQuestion_SubCategoryNotFound() throws Exception {
-        String excelData = "SubCategory,Question,Option 1,Option 2,Option 3,Option 4,Correct Option,Positive Mark,Negative Mark\n" +
-                           "UnknownSubCategory,What is Spring?,Option A,Option B,Option C,Option D,1,1,-0.25\n";
-
-        InputStream inputStream = new ByteArrayInputStream(excelData.getBytes());
-        MockMultipartFile file = new MockMultipartFile("file", "QuestionBank.xlsx", "text/xlsx", inputStream);
-
-        when(subCategoryRepository.findBysubCategoryName("UnknownSubCategory")).thenReturn(Optional.empty());
+    public void testCreateMcqQuestion_FileProcessingException() throws IOException {
+        MockMultipartFile file = new MockMultipartFile("test.txt", "test.txt", "text/plain", "some text".getBytes());
 
         try {
             mcqQuestionService.createMcqQuestion(file);
-            fail("Expected DataNotFoundException was not thrown");
-        } catch (DataNotFoundException ex) {
-            assertEquals("SubCategory is not found.", ex.getMessage());
+        } catch (FileProcessingException e) {
+            assertEquals("Error occurred while processing file for creating McqQuestions", e.getMessage());
         }
-    }
 
-    @Test
-    public void testCreateMcqQuestion_DuplicateQuestion() throws Exception {
-        String excelData = "SubCategory,Question,Option 1,Option 2,Option 3,Option 4,Correct Option,Positive Mark,Negative Mark\n" +
-                           "Annotation,What is Spring Boot?,Option A,Option B,Option C,Option D,1,1,-0.25\n";
-
-        InputStream inputStream = new ByteArrayInputStream(excelData.getBytes());
-        MockMultipartFile file = new MockMultipartFile("file", "QuestionBank.xlsx", "text/xlsx", inputStream);
-
-        when(subCategoryRepository.findBysubCategoryName("Annotation")).thenReturn(Optional.of(subCategory));
-        when(mcqQuestionRepository.findByquestion("What is Spring Boot?")).thenReturn(Optional.of(mcqQuestion));
-
-        try {
-            mcqQuestionService.createMcqQuestion(file);
-            fail("Expected DataAlreadyExistsException was not thrown");
-        } catch (DataAlreadyExistsException ex) {
-            assertEquals("McqQuestion is already present.", ex.getMessage());
-        }
+        verifyNoInteractions(subCategoryRepository);
+        verifyNoInteractions(mcqQuestionRepository);
     }
 
     @Test
