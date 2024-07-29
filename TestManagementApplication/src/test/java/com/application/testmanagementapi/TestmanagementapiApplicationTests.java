@@ -8,6 +8,7 @@ class TestmanagementapiApplicationTests {
 
 	@Test
 	void contextLoads() {
+	    TestmanagementapiApplication.main(new String[]{});
 	}
 
 }
